@@ -23,7 +23,7 @@ const NewsPage = (props) => {
             <ul>
                 {articles.map((newsArticle) => {
                     return (
-                        <li><Link href={newsArticle.href}>{newsArticle.title}</Link></li>
+                        <li><Link href={`news/${newsArticle.href}`}>{newsArticle.title}</Link></li>
                     )
                 })}
             </ul>
