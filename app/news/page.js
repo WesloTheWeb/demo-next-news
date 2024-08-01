@@ -3,15 +3,15 @@ import Link from 'next/link';
 const NewsPage = (props) => {
     const articles = [
         {
-            title: 'item1',
+            title: 'Simone Biles makes history as the American Gymnast with the most olympic medals ever',
             href: '1'
         },
         {
-            title: 'item2',
+            title: `South Korean Sharpshooter Kim Yeji is the 2024 Olympics' First Breakout style star`,
             href: '2'
         },
         {
-            title: 'item3',
+            title: 'Paris 2024 Judo: All rsults, as Lasha Bekauri of Goergia takes home second straight gold',
             href: '3'
         }
     ];
@@ -19,10 +19,14 @@ const NewsPage = (props) => {
     return (
         <>
             <h1>News Items</h1>
-            <ul>
+            <ul className='articles'>
                 {articles.map((newsArticle) => {
                     return (
-                        <li><Link href={`news/${newsArticle.href}`}>{newsArticle.title}</Link></li>
+                        <li key={newsArticle.title}>
+                            <Link href={`news/${newsArticle.href}`}>
+                                {newsArticle.title}
+                            </Link>
+                        </li>
                     )
                 })}
             </ul>
