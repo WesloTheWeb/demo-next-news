@@ -1,4 +1,5 @@
 import './globals.css';
+import MainHeader from './src/components/MainHeader/MainHeader';
 import Navigation from './src/components/Navigation/Navigation';
 
 export const metadata = {
@@ -10,9 +11,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-      <Navigation />
-        {children}
+        <div id="page">
+          <MainHeader />
+          {children}
+        </div>
       </body>
     </html>
   )
-}
+};

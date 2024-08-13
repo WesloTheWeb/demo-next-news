@@ -18,8 +18,8 @@ const NewsPage = (props) => {
 
     return (
         <>
-            <h1>News Items</h1>
-            <ul className='articles'>
+            <h1>News Page</h1>
+            <ul className='news-list'>
                 {articles.map((newsArticle) => {
                     return (
                         <li key={newsArticle.title}>
