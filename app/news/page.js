@@ -1,30 +1,18 @@
 import Link from 'next/link';
+import { DUMMY_NEWS } from '@/dummy-news';
 
-const NewsPage = (props) => {
-    const articles = [
-        {
-            title: 'Simone Biles makes history as the American Gymnast with the most olympic medals ever',
-            href: '1'
-        },
-        {
-            title: `South Korean Sharpshooter Kim Yeji is the 2024 Olympics' First Breakout style star`,
-            href: '2'
-        },
-        {
-            title: 'Paris 2024 Judo: All rsults, as Lasha Bekauri of Goergia takes home second straight gold',
-            href: '3'
-        }
-    ];
+const NewsPage = () => {
 
     return (
         <>
             <h1>News Page</h1>
             <ul className='news-list'>
-                {articles.map((newsArticle) => {
+                {DUMMY_NEWS.map((newsItem) => {
                     return (
-                        <li key={newsArticle.title}>
-                            <Link href={`news/${newsArticle.href}`}>
-                                {newsArticle.title}
+                        <li key={newsItem.id}>
+                            <Link href={`news/${newsItem.slug}`}>
+                                <img src={`/images/news/${newsItem.image}`} alt={newsItem.title} />
+                                <span>{newsItem.title}</span>
                             </Link>
                         </li>
                     )
