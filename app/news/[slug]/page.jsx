@@ -1,9 +1,14 @@
 import { DUMMY_NEWS } from "@/dummy-news";
+import { notFound } from "next/navigation";
 
 export default function NewsPage({ params }) {
   // ? takes whatever the [] value is in folder:
   const newsSlug = params.slug;
   const newsItem = DUMMY_NEWS.find(newsItem => newsItem.slug === newsSlug);
+
+  if (!newsItem) {
+    return notFound();
+  };
 
   console.log('newsItem value', newsItem);
 
