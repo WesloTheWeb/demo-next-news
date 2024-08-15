@@ -11,6 +11,10 @@ const Navigation = ({ }) => {
         {
             title: "News",
             path: "/news"
+        },
+        {
+            title: "Archive",
+            path: "/archive"
         }
     ];
 
