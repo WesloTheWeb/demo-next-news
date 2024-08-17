@@ -11,6 +11,7 @@ export function getLatestNews() {
 export function getAvailableNewsYears() {
   return DUMMY_NEWS.reduce((years, news) => {
     const year = new Date(news.date).getFullYear();
+    console.log('year', year); 
     if (!years.includes(year)) {
       years.push(year);
     }
