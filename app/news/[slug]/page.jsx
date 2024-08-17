@@ -10,8 +10,6 @@ export default function NewsPage({ params }) {
     return notFound();
   };
 
-  console.log('newsItem value', newsItem);
-
   console.log('params object', params);
 
   return (

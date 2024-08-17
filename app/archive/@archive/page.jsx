@@ -3,7 +3,6 @@ import { getAvailableNewsYears } from "@/app/src/lib/news"
 
 export default function ArchivePage() {
     const links = getAvailableNewsYears();
-    console.log('links', links);
 
     return (
         <header id="archive-header">
@@ -11,11 +10,13 @@ export default function ArchivePage() {
                 <ul>
                     {links.map((link) => {
                         return (
-                            <Link href={`/archive.${link}`}>{link}</Link>
+                            <li key={link}>
+                                <Link href={`/archive/${link}`}>{link}</Link>
+                            </li>
                         )
                     })}
                 </ul>
             </nav>
         </header>
-    )
-}
+    );
+};
