@@ -26,6 +26,12 @@ export default function FilteredNewsPage({ params }) {
         links = [];
     };
 
+    // Error handling cases
+    if (selectedYear && !getAvailableNewsYears().includes(+selectedYear) ||
+        selectedMonth && !getAvailableNewsMonths(selectedYear).includes(+selectedMonth)) {
+        throw new Error('Invalid filter.');
+    };
+
     if (news && news.length > 0) {
         newsContent = <NewsList news={news} />
     };
