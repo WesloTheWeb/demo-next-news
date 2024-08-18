@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
 
+/* General  */
 * {
   box-sizing: border-box;
 }
@@ -26,6 +27,8 @@ ul {
   max-width: 60rem;
   margin: 2rem auto;
 }
+
+/* Navigation / Header */
 
 #main-header {
   display: flex;
@@ -93,6 +96,13 @@ ul {
   font-size: 1.2rem;
   margin: 1rem .75rem;
 }
+
+.navigation-container a.active {
+  background-color: #bcbcb7;
+  color: #181817;
+}
+
+/* News Articles */
 
 .articles a {
   display: block;
@@ -193,6 +203,8 @@ ul {
   padding-bottom: 2rem;
   border-bottom: 2px solid #b0b0a6;
 }
+
+/* Errors */
 
 .error {
   text-align: center;

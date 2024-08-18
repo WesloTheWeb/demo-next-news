@@ -1,5 +1,4 @@
-import Link from "next/link";
-
+import NavLink from "../NavLink/NavLink";
 
 const Navigation = ({ }) => {
 
@@ -22,7 +21,10 @@ const Navigation = ({ }) => {
         <nav className="navigation-container">
             {
                 navigationLinks.map((newsItem) => {
-                    return <Link key={newsItem.title} href={newsItem.path}>{newsItem.title}</Link>
+                    return <NavLink 
+                        key={newsItem.title} 
+                        href={newsItem.path}
+                        title={newsItem.title} />
                 })
             }
         </nav>
