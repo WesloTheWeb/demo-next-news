@@ -1,5 +1,5 @@
 import { DUMMY_NEWS } from '@/dummy-news';
-import NewsList from '../src/components/NewsList/NewsList';
+import NewsList from '../../src/components/NewsList/NewsList';
 
 const NewsPage = () => {
 
