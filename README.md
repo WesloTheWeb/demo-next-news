@@ -7,8 +7,6 @@ I hope to make this a reference piece to myself or others or a sandbox to try ne
 This is Maximillian Schwarzmuller course.
 
 # Bookmark
-## Currently on Section 4
-
 
 # Learnings / Review
 ## The find method:
@@ -16,3 +14,10 @@ The find method in JavaScript is used to search for and return the first element
 
 Here we use it to match the params of the slug in our `dummy-news` file. It will return the first element that is matching slug 
 and we can use that object.
+
+
+## Parallel routes and Interceptor
+We can use parallel routes and interceptor routes as a way to have modals. Note that it affects the file structure not so much the URL.
+
+## Middleware
+Middleware runs on every request we can use to modify data. The `NextResponse` is an object we can use to help us redirect if needed.
