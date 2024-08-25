@@ -6,6 +6,7 @@ I hope to make this a reference piece to myself or others or a sandbox to try ne
 
 This is Maximillian Schwarzmuller course.
 
+This is the last notes for up to section 4. The later version would have the backend. This version has the data in a static file.
 # Bookmark
 
 # Learnings / Review
@@ -18,6 +19,11 @@ and we can use that object.
 
 ## Parallel routes and Interceptor
 We can use parallel routes and interceptor routes as a way to have modals. Note that it affects the file structure not so much the URL.
+
+parellel routes are initiated by having an '@' 
+interceptor routes are initiated by having an () and using . notation similar to import files to access the same level.
+
+## Router Groups
 
 ## Middleware
 Middleware runs on every request we can use to modify data. The `NextResponse` is an object we can use to help us redirect if needed.
