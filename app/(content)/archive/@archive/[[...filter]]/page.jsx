@@ -2,7 +2,7 @@ import Link from "next/link";
 import NewsList from "@/app/src/components/NewsList/NewsList";
 import { getNewsForYear, getAvailableNewsYears, getAvailableNewsMonths, getNewsForYearAndMonth } from "@/app/src/lib/news";
 
-export default function FilteredNewsPage({ params }) {
+export default async function FilteredNewsPage({ params }) {
     // ? Remember: Params is always passed in and the value you can access is what is in the square brackets.
     const filter = params.filter;
     console.log(`[@archive/[[...filter]]/page.js]`, filter);
@@ -14,21 +14,23 @@ export default function FilteredNewsPage({ params }) {
 
     let news;
     let newsContent = "No news found for the selected period.";
-    let links = getAvailableNewsYears();
+    let links = await getAvailableNewsYears();
 
     if (selectedYear && !selectedMonth) {
-        news = getNewsForYear(selectedYear);
+        news = await getNewsForYear(selectedYear);
         links = getAvailableNewsMonths(selectedYear);
     };
 
     if (selectedYear && selectedMonth) {
-        news = getNewsForYearAndMonth(selectedYear, selectedMonth);
+        news = await getNewsForYearAndMonth(selectedYear, selectedMonth);
         links = [];
     };
 
+    const availableYears = await getAvailableNewsYears();
+
     // Error handling cases
-    if (selectedYear && !getAvailableNewsYears().includes(+selectedYear) ||
-        selectedMonth && !getAvailableNewsMonths(selectedYear).includes(+selectedMonth)) {
+    if (selectedYear && !availableYears.includes(selectedYear) ||
+        selectedMonth && !getAvailableNewsMonths(selectedYear).includes(selectedMonth)) {
         throw new Error('Invalid filter.');
     };
 
