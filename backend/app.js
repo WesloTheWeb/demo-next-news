@@ -52,6 +52,7 @@ const DUMMY_NEWS = [
 
 const db = sqlite('data.db');
 
+// ? Example of using SQL, this is what makes the data.db file
 function initDb() {
   db.prepare(
     'CREATE TABLE IF NOT EXISTS news (id INTEGER PRIMARY KEY, slug TEXT UNIQUE, title TEXT, content TEXT, date TEXT, image TEXT)'

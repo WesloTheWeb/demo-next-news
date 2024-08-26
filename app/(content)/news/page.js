@@ -1,12 +1,13 @@
-import { DUMMY_NEWS } from '@/dummy-news';
+import { getAllNews } from '@/app/src/lib/news';
 import NewsList from '../../src/components/NewsList/NewsList';
 
-const NewsPage = () => {
+const NewsPage = async () => {
+    const news = getAllNews();
 
     return (
         <>
             <h1>News Page</h1>
-            <NewsList news={DUMMY_NEWS} />
+            <NewsList news={news} />
         </>
     );
 };
