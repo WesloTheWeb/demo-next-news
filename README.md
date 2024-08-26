@@ -24,6 +24,14 @@ parellel routes are initiated by having an '@'
 interceptor routes are initiated by having an () and using . notation similar to import files to access the same level.
 
 ## Router Groups
+You can make router groups by just having () and then a name in there. For this case we have
+(marketing) and (content). The name does not affect the URL. This is just a way to group routes.
 
 ## Middleware
 Middleware runs on every request we can use to modify data. The `NextResponse` is an object we can use to help us redirect if needed.
+
+## Suspense
+If we wish to show loading for granular data, lets say a list we can use suspense by React. This is good for cases where
+we don't want to show the whole component loading but just parts of it such as data fetching. It has a `fallback` prop.
+
+Each Suspense does it own thing and does not wait on others.
