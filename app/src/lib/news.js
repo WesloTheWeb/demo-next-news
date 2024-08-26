@@ -3,8 +3,16 @@ import { DUMMY_NEWS } from '@/dummy-news';
 
 const db = sql('data.db');
 
-export function getAllNews() {
+// export function getAllNews() {
+//   const news = db.prepare('SELECT * FROM news').all();
+//   return news;
+// }
+
+export async function getAllNews() {
   const news = db.prepare('SELECT * FROM news').all();
+  
+  // ? Induces a load wait delay.
+  await new Promise(resolve => setTimeout(resolve, 2000));
   return news;
 }
 

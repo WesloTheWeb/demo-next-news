@@ -2,7 +2,7 @@ import { getAllNews } from '@/app/src/lib/news';
 import NewsList from '../../src/components/NewsList/NewsList';
 
 const NewsPage = async () => {
-    const news = getAllNews();
+    const news = await getAllNews();
 
     return (
         <>
