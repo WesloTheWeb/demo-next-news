@@ -3,10 +3,13 @@ This project is from a tutorial of NextJS 14.
 The aim of this is to learn NextJS 14 features. For sake of simplicity using regular JavaScript. 
 I hope to make this a reference piece to myself or others or a sandbox to try new things. 
 
-
 This is Maximillian Schwarzmuller course.
 
-This is the last notes for up to section 4. The later version would have the backend. This version has the data in a static file.
+08/28/2024 -
+I reached the end of the knowledge for this demo project. I will keep it available here for my own notes but wanted
+to highlight NextJS 14 app router stuff. The next project will deal with data manipulating, but this project deals
+heavily with async and data fetching with sql-lite.
+
 # Bookmark
 
 # Learnings / Review
